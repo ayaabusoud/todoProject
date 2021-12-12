@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To Do List</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/style.css" rel="stylesheet">
+        <script src="../js/home.js"></script>
+    </head>
+
+    <body>
+    <div>
+<div id="background-img">
+</div>
+<div id="container">
+<header>
+    <h1>todo</h1>
+    <img src="../images/icon-sun.svg" alt="sun icon" id="icon"/>
+</header>
+
+<section id="new-todo">
+    <div class="check"> 
+    <div  id="add-item" ></div>
+    </div>
+    <div id="new-input">
+        <form >
+            <input id="todo-input" type="text" placeholder="Create a new todo..." />
+        </form>
+    </div>
+</section>
+
+<section id="todo-wrapper">
+    <ul id="todo-items">
+
+        <!--<div class="todo-item">
+            <div class="check">
+            <div class="check-mark checked">
+            <img src="../images/icon-check.svg">
+            </div>
+            </div>
+            <li>study</li>
+            <div class="crossDiv">
+            <img src="../images/icon-cross.svg" class="delete">
+            </div>
+            </div>--> 
+
+    </ul>
+
+    <div id="todo-info">
+        <div id="items-left"><span id="left"> 0 </span> items left</div>
+
+        <div id="items-statuses">
+            <span id="all" class="click">All</span>
+            <span id="active">Active</span>
+            <span id="completed">Completed</span>
+        </div>
+        
+        <div id="items-clear">
+            <span id="clear-completed">Clear Completed</span>
+        </div>
+    </div>
+
+</section>
+</div>
+    </div>
+
+
+    </body>
+</html>
