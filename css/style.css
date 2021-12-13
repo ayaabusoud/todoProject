@@ -59,6 +59,7 @@ h1{
     display: flex;
 }
 
+
 .check{
     flex-basis: 90px;
     display: flex;
@@ -66,7 +67,7 @@ h1{
     align-items: center;
 }
 
-.check-mark {
+#add-item , .check-marks {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -77,20 +78,20 @@ h1{
     align-items: center;
 }
 
-.check-mark img {
+.check-marks img {
     visibility: hidden;
 }
 
-.check-mark.checked img, .check-mark:hover img {
+.check-marks.checked img, .check-marks.cheked:hover img {
     visibility: visible;
 }
 
-.check-mark:hover {
+.check-marks:hover, #add-item:hover {
     border-color: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
     background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);   
 }
 
-.check-mark.checked {
+.check-marks.checked{
     background-color: pink;
     background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);   
 }
