@@ -136,3 +136,15 @@ li {
     box-shadow: 0 0px 7px 0px hsl(235, 21%, 11%);
     border-color: hsl(235, 24%, 19%);
 }
+
+.crossDiv  {
+    display: flex;
+    align-items:center;
+    margin-left: auto;
+    margin-right: 20px;
+    opacity: 0.0;
+}
+
+.crossDiv:hover {
+    opacity: 1.0;
+}
