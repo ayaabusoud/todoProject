@@ -124,7 +124,7 @@ h1{
     color: hsl(234, 39%, 85%);
 }
 
-li.checked .text{
+li.completed .text{
     text-decoration: line-through;
     color: hsl(233, 14%, 35%);
     }
