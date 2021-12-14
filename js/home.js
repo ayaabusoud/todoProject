@@ -55,6 +55,7 @@ function addNewTodo(){
     for(let i = 0 ; i < deleteTodo.length ; i ++){
         deleteTodo[i].addEventListener("click",deleteTodoItem);
     }
+
     let deleteCompleted = document.getElementById("clear-completed");
     deleteCompleted.addEventListener("click" , deleteCompletedTodo);
 
@@ -75,7 +76,8 @@ function checkTodo(){
     }
     let itemLeft = document.getElementById("left");
         itemLeft.innerHTML = count; 
-}   itemLeft.innerHTML = count; 
+   itemLeft.innerHTML = count; 
+}
 
 
 function deleteTodoItem(){
@@ -94,14 +96,5 @@ function deleteTodoItem(){
     }
      
   }
-<<<<<<< HEAD
-=======
-  function deleteCompletedTodo(){
-    let completed = document.querySelectorAll(".completed");
-    for ( let i = 0 ; i < completed.length ; i++){
-        completed[i].remove();
-    }
-    }
 
-  
->>>>>>> 7fd0168c34e793d6bc18670ccfbd4989566df8d6
+ 
