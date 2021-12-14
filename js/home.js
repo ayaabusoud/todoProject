@@ -55,6 +55,8 @@ function addNewTodo(){
     for(let i = 0 ; i < deleteTodo.length ; i ++){
         deleteTodo[i].addEventListener("click",deleteTodoItem);
     }
+    let deleteCompleted = document.getElementById("clear-completed");
+    deleteCompleted.addEventListener("click" , deleteCompletedTodo);
 
 }
 
@@ -92,5 +94,11 @@ function deleteTodoItem(){
     }
      
   }
+  function deleteCompletedTodo(){
+    let completed = document.querySelectorAll(".completed");
+    for ( let i = 0 ; i < completed.length ; i++){
+        completed[i].remove();
+    }
+    }
 
   
