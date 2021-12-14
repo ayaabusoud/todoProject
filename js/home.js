@@ -63,12 +63,12 @@ function checkTodo(){
 
      if (this.classList.contains('checked')){
         this.classList.remove('checked');
-        li.classList.remove('checked');
+        li.classList.remove('completed');
         count++
     }
     else{
         this.classList.add('checked');
-        li.classList.add('checked');
+        li.classList.add('completed');
         count--;
     }
     let itemLeft = document.getElementById("left");
