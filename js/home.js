@@ -81,3 +81,70 @@ function checkTodo(){
     let itemLeft = document.getElementById("left");
         itemLeft.innerHTML = count; 
 }
+
+
+var input = document.getElementById('userInput');
+var enterButton = document.getElementById('enter');
+var deleteButtons = document.getElementsByClassName("Remove");
+  for(var i = 0; i < deleteButtons.length; i++){
+    deleteButtons[i].addEventListener('click', deleteListItem, false);
+  }
+
+var completeButtons =
+  document.getElementsByClassName("Complete");
+    for(var i = 0; i < completeButtons.length; i++){
+      completeButtons[i].addEventListener('click', completeListItem, false);
+    }
+var ul = document.querySelector('ul');
+
+function inputLength(){
+ return input.value.length;
+};
+
+function listLength(){
+  return item.length;
+}
+
+function createListElement(){
+  var li = document.createElement('li');
+  li.appendChild(document.createTextNode(input.value));
+  //makes text node 
+  
+  var clonedButton = 
+     document.getElementById("buttons").cloneNode(true);
+      clonedButton.childNodes[1].addEventListener('click', deleteListItem, false); 
+      clonedButton.childNodes[3].addEventListener('click', completeListItem, false); 
+  
+  li.appendChild(clonedButton);
+  ul.appendChild(li);
+  input.value = "";
+  
+}
+
+function deleteListItem(){
+  	alert("Item was deleted");
+    // li.classList.add("delete");
+}
+
+function completeListItem(){
+  alert("Item was completed");
+  li.classLi
+  
+}
+
+function addListAfterClick(){
+  if(inputLength() > 0){
+    createListElement();
+  }
+}
+// Hit enter key and create list
+function addAfterPress(event){
+  if(inputLength() > 0 && event.which === 13){
+    createListElement();
+  }
+}
+
+
+
+enterButton.addEventListener('click', addListAfterClick);
+input.addEventListener('keypress', addAfterPress);
