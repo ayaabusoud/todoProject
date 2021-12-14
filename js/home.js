@@ -59,17 +59,22 @@ function addNewTodo(){
 }
 
 function checkTodo(){
+    let li = this.parentElement.parentElement ;
+
      if (this.classList.contains('checked')){
         this.classList.remove('checked');
+        li.classList.remove('checked');
         count++
     }
     else{
         this.classList.add('checked');
+        li.classList.add('checked');
         count--;
     }
     let itemLeft = document.getElementById("left");
         itemLeft.innerHTML = count; 
-}
+}   itemLeft.innerHTML = count; 
+
 
 function deleteTodoItem(){
     let deletetodo = this.parentElement

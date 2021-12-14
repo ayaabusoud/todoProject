@@ -116,12 +116,18 @@ h1{
 #new-input input::placeholder {
     color: hsl(233, 14%, 35%);
 }
-li {
+
+.text{
     display: flex;
     align-items: center;
     font-size: 18px;
     color: hsl(234, 39%, 85%);
 }
+
+li.checked .text{
+    text-decoration: line-through;
+    color: hsl(233, 14%, 35%);
+    }
 
 
 .todo-item {
