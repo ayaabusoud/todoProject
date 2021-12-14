@@ -72,10 +72,20 @@ function checkTodo(){
 }
 
 function deleteTodoItem(){
-  this.parentElement.remove();
-  count--;
-  let itemleft = document.getElementById("left");
-  itemleft.innerHTML=count;
-}
+    let deletetodo = this.parentElement
+    let check = deletetodo.firstChild ;
+    
+    if (check.firstChild.classList.contains("checked")){
+      deletetodo.remove();
+      return;
+    }
+    else {
+      count--;
+      let itemLeft = document.getElementById("left");
+      itemLeft.innerHTML = count; 
+      deletetodo.remove();
+    }
+     
+  }
 
   
