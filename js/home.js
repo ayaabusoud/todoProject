@@ -96,6 +96,13 @@ function deleteTodoItem(){
     }
      
   }
+  function deleteCompletedTodo(){
+    let completed = document.querySelectorAll(".completed");
+    for ( let i = 0 ; i < completed.length ; i++){
+        completed[i].remove();
+    }
+    }
+    
 
-  
+
  
