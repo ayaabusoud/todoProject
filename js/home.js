@@ -15,12 +15,32 @@ function init(){
     const add = document.getElementById("add-item");
     add.addEventListener("click" , addNewTodo);
 } 
-let icon = document.getElementById("icon");
-    icon.addEventListener("click" , changeTheme);
 
 let count = 0 ;
 
+let icon = document.getElementById("icon");
+    icon.addEventListener("click" , changeTheme);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function addNewTodo(){
+
+
 
     let todo = document.getElementById("todo-input");
     let todoList =document.getElementById("todo-items");
@@ -104,6 +124,39 @@ function deleteTodoItem(){
         completed[i].remove();
     }
     }
+
+
+    function activeFilter(){
+        let todoList = document.querySelectorAll(".todo-item");
+        for(let i = 0 ; i < todoList.length ; i++){
+          if (todoList[i].classList.contains("completed")){
+            todoList[i].style.display = "none";
+          }
+         else{
+          todoList[i].style.display = "flex";
+         }
+        }
+      }
+      
+      
+      function completeFilter(){
+        let todoList = document.querySelectorAll(".todo-item");
+        for(let i = 0 ; i < todoList.length ; i++){
+          if (!todoList[i].classList.contains("completed")){
+            todoList[i].style.display = "none";
+          }
+          else{
+            todoList[i].style.display = "flex";
+          }
+        }
+      }
+      
+      function allFilter(){
+        let todoList = document.querySelectorAll(".todo-item");
+        for(let i = 0 ; i < todoList.length ; i++){
+            todoList[i].style.display = "flex";
+        }
+      }
     
    
     
