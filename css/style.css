@@ -6,33 +6,56 @@
     src: url("../font/JosefinSans-Bold.ttf");
     font-family: bold;
 }
+
 *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
 }
 
+#theme-dark {
+    --bg-image:url(../images/desktop-dark.jpg) ;
+    --icon :url(../images/icon-sun.svg) no-repeat;
+    --main-bg: hsl(235, 21%, 11%);
+    --todo-bg: hsl(235, 24%, 19%);
+    --todo-shadow :hsl(235, 21% ,11%);
+    --font-color: hsl(234, 39%, 85%);
+    --border : hsl(237, 14%, 26%);
+}
+
+#theme-light {
+    --bg-image: url(../images/desktop-light.jpg) ;
+    --icon :url(../images/icon-moon.svg)  no-repeat;
+    --main-bg: hsla(0, 0%, 97%, 0.952);
+    --todo-bg: hsl(0, 0%, 98%);
+    --todo-shadow :hsl(233, 13%, 88%);
+    --font-color: hsl(240, 13%, 15%);
+    --border : hsl(240, 8%, 80%);
+}
+
 body{
     display: flex;
     justify-content: center;
-    background-color: hsl(235 ,21% ,11%);
+    background-color: var(--main-bg);
     font-family: regular;
+    
 }
-#background-img{
-    background-image: url("../images/desktop-dark.jpg");
-    background-size:100%;
+
+   #background-img{
+    background-image : var(--bg-image) ;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: absolute;
     height: 45vh;
-    background-repeat: no-repeat;
-    top: 0;
+    top: 0; 
     right:0;
     left: 0;
     z-index: -1;
+    display: inline;
 }
 
  #icon{
-    background: url("../images/icon-sun.svg") ;
-    background-repeat: no-repeat;
+    background:var(--icon) ;
     display: block;
     width: 26px;
     height: 26px;
@@ -40,12 +63,13 @@ body{
 }
 
 #container{
-    width: 700px;
-    margin: 0 30px;
-    margin-top: 100px;
+    width: 600px;
+    margin: 0 20px;
+    
 }
 
 header{
+    margin-top: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,15 +82,17 @@ h1{
     font-size: 50px;
    text-transform: uppercase;
 }
-
-#new-todo {
+  
+   #new-todo {
     width: 100%;
     height: 70px;
-    background-color: hsl(235, 24%, 19%);
+    background-color: var(--todo-bg);
     margin-top: 50px;
     border-radius: 6px;
     display: flex;
 }
+
+
 .check{
     flex-basis: 90px;
     display: flex;

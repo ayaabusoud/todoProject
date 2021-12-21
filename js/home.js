@@ -103,6 +103,19 @@ function deleteTodoItem(){
     }
     }
     
-
+    let icon = document.getElementById("icon");
+    icon.addEventListener("click" , changeTheme);
+    
+    function changeTheme(){
+        let body = document.querySelector("body") ;
+        if (body.id === 'theme-light'){
+          body.removeAttribute('id');
+          body.id = 'theme-dark';
+        }
+        else{
+          body.removeAttribute('id');
+          body.id = 'theme-light';
+        }
+      }
 
  
