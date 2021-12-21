@@ -16,9 +16,21 @@ function init(){
     add.addEventListener("click" , addNewTodo);
     let icon = document.getElementById("icon");
     icon.addEventListener("click" , changeTheme);
+
+    let activeSpan = document.getElementById('active');
+    activeSpan.addEventListener("click" , activeFilter);
+    
+    let allSpan = document.getElementById('all');
+    allSpan.addEventListener("click" , allFilter);
+
+    let completeSpan = document.getElementById('complete');
+    completeSpan.addEventListener("click" , completeFilter);
 } 
 
+
 let count = 0 ;
+
+
 
 function addNewTodo(){
     let todo = document.getElementById("todo-input");
@@ -104,39 +116,6 @@ function deleteTodoItem(){
     }
     }
 
-
-    function activeFilter(){
-        let todoList = document.querySelectorAll(".todo-item");
-        for(let i = 0 ; i < todoList.length ; i++){
-          if (todoList[i].classList.contains("completed")){
-            todoList[i].style.display = "none";
-          }
-         else{
-          todoList[i].style.display = "flex";
-         }
-        }
-      }
-      
-      
-      function completeFilter(){
-        let todoList = document.querySelectorAll(".todo-item");
-        for(let i = 0 ; i < todoList.length ; i++){
-          if (!todoList[i].classList.contains("completed")){
-            todoList[i].style.display = "none";
-          }
-          else{
-            todoList[i].style.display = "flex";
-          }
-        }
-      }
-      
-      function allFilter(){
-        let todoList = document.querySelectorAll(".todo-item");
-        for(let i = 0 ; i < todoList.length ; i++){
-            todoList[i].style.display = "flex";
-        }
-      }
-    
    
     
     function changeTheme(){
@@ -151,4 +130,47 @@ function deleteTodoItem(){
         }
       }
 
- 
+      function filter(){
+        let click = document.querySelectorAll(".click");
+        for (let i = 0 ; i < click.length ; i++){
+          click[i].classList.remove("click");
+        }
+      }
+      
+      function activeFilter(){
+        filter();
+        this.classList.add("click");
+        let todoList = document.querySelectorAll(".todo-item");
+        for(let i = 0 ; i < todoList.length ; i++){
+          if (todoList[i].classList.contains("completed")){
+            todoList[i].style.display = "none";
+          }
+         else{
+          todoList[i].style.display = "flex";
+         }
+        }
+      }
+      
+      
+      function completeFilter(){
+        filter();
+        this.classList.add("click");
+        let todoList = document.querySelectorAll(".todo-item");
+        for(let i = 0 ; i < todoList.length ; i++){
+          if (!todoList[i].classList.contains("completed")){
+            todoList[i].style.display = "none";
+          }
+          else{
+            todoList[i].style.display = "flex";
+          }
+        }
+      }
+      
+      function allFilter(){
+        filter();
+        this.classList.add("click");
+        let todoList = document.querySelectorAll(".todo-item");
+        for(let i = 0 ; i < todoList.length ; i++){
+            todoList[i].style.display = "flex";
+        }
+      }
