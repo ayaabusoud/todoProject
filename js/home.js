@@ -14,34 +14,13 @@ window.addEventListener("load" , init);
 function init(){
     const add = document.getElementById("add-item");
     add.addEventListener("click" , addNewTodo);
+    let icon = document.getElementById("icon");
+    icon.addEventListener("click" , changeTheme);
 } 
 
 let count = 0 ;
 
-let icon = document.getElementById("icon");
-    icon.addEventListener("click" , changeTheme);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function addNewTodo(){
-
-
-
     let todo = document.getElementById("todo-input");
     let todoList =document.getElementById("todo-items");
 
