@@ -14,7 +14,9 @@ window.addEventListener("load" , init);
 function init(){
     const add = document.getElementById("add-item");
     add.addEventListener("click" , addNewTodo);
-}
+} 
+let icon = document.getElementById("icon");
+    icon.addEventListener("click" , changeTheme);
 
 let count = 0 ;
 
@@ -103,8 +105,7 @@ function deleteTodoItem(){
     }
     }
     
-    let icon = document.getElementById("icon");
-    icon.addEventListener("click" , changeTheme);
+   
     
     function changeTheme(){
         let body = document.querySelector("body") ;
