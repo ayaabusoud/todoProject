@@ -33,18 +33,18 @@ let count = 0 ;
 
 
 function addNewTodo(){
-    let todo = document.getElementById("todo-input");
-    let todoList =document.getElementById("todo-items");
+    let todo = document.getElementById("todo-input"); 
+    let todoList =document.getElementById("todo-items"); 
 
     if (todo.value.length > 0){
     count++;
-    let itemLeft = document.getElementById("left");
+    let itemLeft = document.getElementById("left"); 
     itemLeft.innerHTML = count;
 
-    let todoli = document.createElement('li');
+    let todoli = document.createElement('li'); 
     todoli.classList.add('todo-item');
 
-    todoli.innerHTML='<div class="check"><div class="check-marks"><img src="../images/icon-check.svg">';
+    todoli.innerHTML='<div class="check"><div class="check-marks"><img src="../images/icon-check.svg"></div></div>';
     let todoText = document.createElement('span');
     todoText.classList.add('text');
     todoText.innerHTML = todo.value;
@@ -132,9 +132,7 @@ function deleteTodoItem(){
 
       function filter(){
         let click = document.querySelectorAll(".click");
-        for (let i = 0 ; i < click.length ; i++){
-          click[i].classList.remove("click");
-        }
+          click[0].classList.remove("click");
       }
       
       function activeFilter(){
